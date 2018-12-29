@@ -16,5 +16,9 @@ filetype plugin indent on    " required
 
 " End of vundle
 
+:let mapleader = "\<Space>"
+
+" Map ctrl s to save
+noremap <C-s> :w<CR>
 set showmode
 set number

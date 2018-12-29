@@ -110,6 +110,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# This loads in key remapping if the file exist::
+if [ -f ~/.xinitrc ]; then
+	stty -ixon
+	. ~/.xinitrc
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
