@@ -110,12 +110,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# This loads in key remapping if the file exist::
-if [ -f ~/.xinitrc ]; then
-	stty -ixon
-	. ~/.xinitrc
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -129,6 +123,13 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# This loads in key remapping if the file exist::
+
+# This needs to be towards the bottom of file to not get a delay in new tab with tmux
+if [ -f ~/.xinitrc ]; then
+	stty -ixon
+	. ~/.xinitrc
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
