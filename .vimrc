@@ -33,3 +33,4 @@ set autoindent   "  - turns it on
 set smartindent  "  - does the right thing (mostly) in programs
           
 set wildignore+=*.swp
+set ignorecase
