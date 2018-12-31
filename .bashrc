@@ -125,15 +125,16 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 # This loads in key remapping if the file exist::
 
+# Bash VIM
+export VISUAL=vim
+export EDITOR="$VISUAL"
+set editing-mode vi
+
 # This needs to be towards the bottom of file to not get a delay in new tab with tmux
 if [ -f ~/.xinitrc ]; then
 	stty -ixon
 	. ~/.xinitrc
 fi
-
-# Bash VIM
-export VISUAL=vim
-export EDITOR="$VISUAL"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
