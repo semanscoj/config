@@ -6,10 +6,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" Navigation plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
+
+" Git plugins
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-rhubarb'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
