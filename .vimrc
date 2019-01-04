@@ -13,6 +13,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
 
+"QOL
+Plugin 'scrooloose/nerdcommenter'
+
 " Git plugins
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
