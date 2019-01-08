@@ -35,6 +35,9 @@ noremap <C-s> :w<CR>
 set showmode
 set number
 
+" CTRLP preferences
+let g:ctrlp_by_filename=1
+
 " Control tabs and auto indent
 set tabstop=4    "  - tabs are at proper location
 set expandtab    "  - don't use actual tab character (ctrl-v)
@@ -42,5 +45,5 @@ set shiftwidth=4 "  - indenting is 4 spaces
 set autoindent   "  - turns it on
 set smartindent  "  - does the right thing (mostly) in programs
           
-set wildignore+=*.swp
+set wildignore+=*.swp,.git,*.js
 set ignorecase
