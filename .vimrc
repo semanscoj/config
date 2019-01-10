@@ -22,6 +22,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'thaerkh/vim-indentguides'
 Plugin 'jiangmiao/auto-pairs'
+" Alternative lexima.vim
 
 "QOL
 Plugin 'scrooloose/nerdcommenter'
@@ -45,7 +46,6 @@ noremap <C-s> :w<CR>
 
 set showmode
 set number
-let g:AutoPairsFlyMode = 1
 
 " CTRLP preferences
 let g:ctrlp_by_filename=1
