@@ -57,5 +57,5 @@ set shiftwidth=2 "  - indenting is 2 spaces
 set autoindent   "  - turns it on
 set smartindent  "  - does the right thing (mostly) in programs
           
-set wildignore+=*.swp,*.git,*.js,*.class,*.gsp
+set wildignore+=*.swp,*.git,*.js,*.class,*.gsp,*.data
 set ignorecase
