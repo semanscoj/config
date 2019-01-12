@@ -56,6 +56,12 @@ set softtabstop=2 " proper conversion from tab to spaces
 set shiftwidth=2 "  - indenting is 2 spaces
 set autoindent   "  - turns it on
 set smartindent  "  - does the right thing (mostly) in programs
-          
+
 set wildignore+=*.swp,*.git,*.js,*.class,*.gsp,*.data
 set ignorecase
+
+" Easy updates on vim rc
+nmap <leader>v :edit $MYVIMRC<CR>
+if has("autocmd")
+	autocmd bufwritepost .vimrc source $MYVIMRC
+endif
