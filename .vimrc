@@ -54,10 +54,11 @@ let g:tagbar_type_groovy = {
     \ ]
 \ }
 
-
+" Leader key mappings
 :let mapleader = "\<Space>"
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
+nnoremap <leader>/ :NERDTree<cr>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>
