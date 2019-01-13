@@ -12,6 +12,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'majutsushi/tagbar'
 
 " Code Manipulation
 Plugin 'tpope/vim-unimpaired'
@@ -39,7 +41,23 @@ filetype plugin indent on    " required
 
 " End of vundle
 
+let g:tagbar_type_groovy = {
+    \ 'ctagstype' : 'groovy',
+    \ 'kinds'     : [
+        \ 'p:package:1',
+        \ 'c:classes',
+        \ 'i:interfaces',
+        \ 't:traits',
+        \ 'e:enums',
+        \ 'm:methods',
+        \ 'f:fields:1'
+    \ ]
+\ }
+
+
 :let mapleader = "\<Space>"
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>, :TagbarToggle<cr>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>
@@ -59,6 +77,8 @@ set smartindent  "  - does the right thing (mostly) in programs
 
 set wildignore+=*.swp,*.git,*.js,*.class,*.gsp,*.data
 set ignorecase
+
+set tags=./tags,tags;$HOME
 
 " Easy updates on vim rc
 nmap <leader>v :edit $MYVIMRC<CR>
