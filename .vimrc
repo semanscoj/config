@@ -64,6 +64,7 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>/ :Ack! ''<left>
+nnoremap <leader>g :Gstatus<cr>
 nnoremap <CR> o<Esc>
 
 " Map ctrl s to save
