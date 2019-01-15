@@ -10,8 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Navigation plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mileszs/ack.vim'
 " Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'majutsushi/tagbar'
 
@@ -54,11 +54,17 @@ let g:tagbar_type_groovy = {
     \ ]
 \ }
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 " Leader key mappings
+
 :let mapleader = "\<Space>"
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
-nnoremap <leader>/ :NERDTree<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>/ :Ack! ''<left>
+nnoremap <CR> o<Esc>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>

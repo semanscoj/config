@@ -5,3 +5,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # default vim install is missing +clipboard
 sudo apt-get install vim-gtk
 sudo apt-get install ctags
+sudo apt-get install silversearcher-ag
