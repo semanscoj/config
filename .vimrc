@@ -26,6 +26,13 @@ Plugin 'thaerkh/vim-indentguides'
 Plugin 'jiangmiao/auto-pairs'
 " Alternative lexima.vim
 
+" Google
+"
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
+
+
 "QOL
 Plugin 'scrooloose/nerdcommenter'
 
@@ -40,6 +47,15 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " End of vundle
+
+call glaive#Install()
+
+augroup autoformat_settings
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType html,css,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer autopep8
+augroup END
 
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
@@ -88,6 +104,15 @@ set wildignore+=*.swp,*.git,*.js,*.class,*.gsp,*.data
 set ignorecase
 
 set tags=./tags,tags;$HOME
+
+function! CopyMatches(reg)
+  let hits = []
+  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
+  let reg = empty(a:reg) ? '+' : a:reg
+  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
+endfunction
+command! -register CopyMatches call CopyMatches(<q-reg>)
+
 
 " Easy updates on vim rc
 nmap <leader>v :edit $MYVIMRC<CR>
