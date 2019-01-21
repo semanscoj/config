@@ -41,6 +41,12 @@ filetype plugin indent on    " required
 
 " End of vundle
 
+" change the timing to get out of insert mode
+set noesckeys
+set ttimeout
+set ttimeoutlen=1
+
+
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
     \ 'kinds'     : [
