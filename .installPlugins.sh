@@ -7,3 +7,5 @@ sudo apt-get install vim-gtk
 sudo apt-get install ctags
 sudo apt-get install silversearcher-ag
 sudo apt-get install tmux
+ln -s ~/.snippets/ultisnips/ ~/.vim/ultisnips
+

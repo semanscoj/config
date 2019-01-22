@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'SirVer/ultisnips'
 
 " Syntax
 Plugin 'sheerun/vim-polyglot'
@@ -46,6 +47,16 @@ set noesckeys
 set ttimeout
 set ttimeoutlen=1
 
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories=["ultisnips"]
 
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
