@@ -29,3 +29,9 @@ if($1Id && $2Id){
 	response.sendError 400
 }
 endsnippet
+
+snippet wrp "wrap a visual block and ident" b
+if($1){
+	${VISUAL}
+}$0
+endsnippet
