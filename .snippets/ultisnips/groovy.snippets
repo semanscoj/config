@@ -1,0 +1,37 @@
+snippet cont "Controller Wrapper for one argument"
+def $1Id = params.$1Id
+if($1Id){
+	`!p snip.rv = str(t[1]).title()` $1 = `!p snip.rv = str(t[1]).title()`.get($1Id)
+	if($1){
+		def result = this.$0
+		render result as JSON
+	}else{
+		response.sendError 404
+	}
+}else{
+	response.sendError 400
+}
+endsnippet
+
+snippet cont2 "Controller Wrapper for two arguments"
+def $1Id = params.$1Id
+def $2Id = params.$2Id
+if($1Id && $2Id){
+	`!p snip.rv = str(t[1]).title()` $1 = `!p snip.rv = str(t[1]).title()`.get($1Id)
+	`!p snip.rv = str(t[2]).title()` $2 = `!p snip.rv = str(t[2]).title()`.get($2Id)
+	if($1 && $2){
+		def result = this.$0
+		render result as JSON
+	}else{
+		response.sendError 404
+	}
+}else{
+	response.sendError 400
+}
+endsnippet
+
+snippet wrp "wrap a visual block and ident" b
+if($1){
+	${VISUAL}
+}$0
+endsnippet

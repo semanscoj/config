@@ -19,6 +19,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
 
 " Syntax
 Plugin 'sheerun/vim-polyglot'
@@ -40,6 +42,24 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " End of vundle
+
+" change the timing to get out of insert mode
+set noesckeys
+set ttimeout
+set ttimeoutlen=1
+
+" set python binary for you complete me plugin
+let g:ycm_server_python_interpreter = '/usr/bin/python'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories=["ultisnips"]
 
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
@@ -65,6 +85,7 @@ nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>/ :Ack! ''<left>
 nnoremap <leader>g :Gstatus<cr>
+nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
 nnoremap <CR> o<Esc>
 
