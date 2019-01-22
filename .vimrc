@@ -20,6 +20,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
 
 " Syntax
 Plugin 'sheerun/vim-polyglot'
@@ -47,9 +48,11 @@ set noesckeys
 set ttimeout
 set ttimeoutlen=1
 
+" set python binary for you complete me plugin
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
