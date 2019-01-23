@@ -37,11 +37,22 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'
 
+
+" GUI
+Plugin 'powerline/powerline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " End of vundle
+
+set rtp+=~/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
 
 " change the timing to get out of insert mode
 set noesckeys

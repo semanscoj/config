@@ -13,3 +13,6 @@ sudo apt-get install cmake python-dev
 mkdir /tmp/ycm_build
 cmake -G "Unix Makefiles" /tmp/ycm_build  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 cmake --build /tmp/ycm_build --target ycm_core --config Release
+sudo apt-get install python3 python3-pip
+pip3 install powerline-status
+

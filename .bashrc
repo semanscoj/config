@@ -2,6 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+source ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
+
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
