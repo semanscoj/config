@@ -93,6 +93,7 @@ noremap <C-s> :w<CR>
 
 set showmode
 set number
+set hidden
 syntax on
 " CTRLP preferences
 let g:ctrlp_by_filename=1
