@@ -88,6 +88,7 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>/ :Ack! ''<left>
+nnoremap <leader>s :s:\s*\(\w\+\)\(,\\|$\):\rdef \1 = :g<cr><s-{>dd
 nnoremap <leader>g :Gstatus<cr>
 nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
