@@ -21,6 +21,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tommcdo/vim-exchange'
+
+" Text Objects
+Plugin 'michaeljsmith/vim-indent-object'
 
 " Syntax
 Plugin 'sheerun/vim-polyglot'
@@ -83,9 +87,11 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>/ :Ack! ''<left>
+nnoremap <leader>s :s:\s*\(\w\+\)\(,\\|$\):\rdef \1 = :g<cr><s-{>dd
 nnoremap <leader>g :Gstatus<cr>
 nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
+nnoremap <leader>i :! grails test-app --integration %:t:r<cr>
 nnoremap <CR> o<Esc>
 
 " Map ctrl s to save
