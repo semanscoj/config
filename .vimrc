@@ -35,6 +35,9 @@ Plugin 'jiangmiao/auto-pairs'
 "QOL
 Plugin 'scrooloose/nerdcommenter'
 
+" Grails
+Plugin 'semanscoj/grails-import-vim'
+
 " Git plugins
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -94,6 +97,9 @@ nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
 nnoremap <leader>i :! grails test-app --integration %:t:r<cr>
 nnoremap <CR> o<Esc>
+
+
+nnoremap <leader>I :call GrailsImport()<cr>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>
