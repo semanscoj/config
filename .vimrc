@@ -35,6 +35,9 @@ Plugin 'jiangmiao/auto-pairs'
 "QOL
 Plugin 'scrooloose/nerdcommenter'
 
+" Grails
+Plugin 'semanscoj/grails-import-vim'
+
 " Git plugins
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -87,12 +90,22 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>/ :Ack! ''<left>
-nnoremap <leader>s :s:\s*\(\w\+\)\(,\\|$\):\rdef \1 = :g<cr><s-{>dd
+
+nnoremap <leader>S :call Sql()<cr>
+nnoremap <leader>s :s:\s*\(\w\+\)\(,\\|$\):\rdef \1 = :g<cr><s-{>dd}
+
+function! Sql()
+	normal  ggG$S"G$A,GJ$x0
+endfunction
+
 nnoremap <leader>g :Gstatus<cr>
 nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
 nnoremap <leader>i :! grails test-app --integration %:t:r<cr>
 nnoremap <CR> o<Esc>
+
+
+nnoremap <leader>I :call GrailsImport()<cr>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>
