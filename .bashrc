@@ -136,6 +136,9 @@ if [ -f ~/.xinitrc ]; then
 	. ~/.xinitrc
 fi
 
+export GRAILS_OPTS="-Xmx900m -XX:MaxPermSize=684m"
+export JAVA_OPTS="-Xms2048m -Xmx20480m"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -38,6 +38,13 @@ Plugin 'scrooloose/nerdcommenter'
 " Grails
 Plugin 'semanscoj/grails-import-vim'
 
+" Rails
+"
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'honza/vim-snippets'
+"
 " Git plugins
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -54,14 +61,17 @@ filetype plugin indent on    " required
 set noesckeys
 set ttimeout
 set ttimeoutlen=1
+set timeoutlen=500
+set hidden
+set wrap
 
 " set python binary for you complete me plugin
-let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -84,6 +94,11 @@ let g:tagbar_type_groovy = {
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" Navigate per line even if wrap is on
+nmap k gk
+nmap j gj
+
 " Leader key mappings
 
 :let mapleader = "\<Space>"
