@@ -139,6 +139,10 @@ fi
 export GRAILS_OPTS="-Xmx900m -XX:MaxPermSize=684m"
 export JAVA_OPTS="-Xms2048m -Xmx20480m"
 
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
