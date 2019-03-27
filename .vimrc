@@ -105,7 +105,8 @@ nmap j gj
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>, :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
-nnoremap <leader>/ :Ack! ''<left>
+nnoremap <leader>/ :Ack! '\b<C-R><C-W>\b'<cr>
+nnoremap <leader>? :Ack! ''<left>
 
 nnoremap <leader>S :call Sql()<cr>
 nnoremap <leader>s :s:\s*\(\w\+\)\(,\\|$\):\rdef \1 = :g<cr><s-{>dd}
