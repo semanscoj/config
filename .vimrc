@@ -34,6 +34,7 @@ Plugin 'jiangmiao/auto-pairs'
 
 "QOL
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'roxma/vim-tmux-clipboard'
 
 " Grails
 Plugin 'semanscoj/grails-import-vim'
