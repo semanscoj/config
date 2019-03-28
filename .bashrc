@@ -106,6 +106,11 @@ if [ -f ~/.inspectpoint ]; then
     . ~/.inspectpoint
 fi
 
+# TableUp DB
+if [ -f ~/.tableup ]; then
+    . ~/.tableup
+fi
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
