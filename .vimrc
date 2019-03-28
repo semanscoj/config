@@ -34,7 +34,8 @@ Plugin 'jiangmiao/auto-pairs'
 
 "QOL
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'roxma/vim-tmux-clipboard'
+Plugin 'tmux-plugins/tmux-yank'
+Plugin 'tmux-plugins/tmux-sensible'
 
 " Grails
 Plugin 'semanscoj/grails-import-vim'
@@ -130,6 +131,9 @@ noremap <C-s> :w<CR>
 
 set showmode
 set number
+set hidden
+set clipboard=unnamed
+syntax on
 
 " CTRLP preferences
 let g:ctrlp_by_filename=1
