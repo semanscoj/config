@@ -7,6 +7,7 @@ sudo apt-get install vim-gtk
 sudo apt-get install ctags
 sudo apt-get install silversearcher-ag
 sudo apt-get install tmux
+sudo apt-get install tmuxinator
 ln -s ~/.snippets/ultisnips/ ~/.vim/ultisnips
 # Vim You Complete Me Plugin Requirements
 sudo apt-get install cmake python-dev

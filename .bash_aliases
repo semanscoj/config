@@ -1,3 +1,6 @@
+# Tmuxinator
+alias tx='tmuxinator'
+
 # Git helpers
 alias gits='git status'
 alias gitl='git log -5 --oneline --decorate --all'
