@@ -20,7 +20,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'SirVer/ultisnips'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tommcdo/vim-exchange'
 
 " Text Objects
@@ -58,7 +58,8 @@ set ttimeout
 set ttimeoutlen=1
 
 " set python binary for you complete me plugin
-let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/local/bin/python'
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -116,12 +117,14 @@ noremap <C-s> :w<CR>
 set showmode
 set number
 set hidden
+set nowrap
+set hlsearch
 
 set clipboard=unnamed
 
 syntax on
 " CTRLP preferences
-let g:ctrlp_by_filename=1
+"let g:ctrlp_by_filename=1
 
 " Control tabs and auto indent
 set tabstop=2    "  - tabs are at proper location

@@ -145,6 +145,13 @@ if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
+# grails java
+ulimit -c unlimited
+
+if [ -f $(brew --prefix)/etc/bash_completion  ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
