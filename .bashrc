@@ -147,6 +147,8 @@ fi
 
 # grails java
 ulimit -c unlimited
+export GRAILS_OPTS="-Xmx700m -XX:MaxPermSize=384m"
+export JAVA_OPTS="-Xms1024m -Xmx10240m"
 
 if [ -f $(brew --prefix)/etc/bash_completion  ]; then
     . $(brew --prefix)/etc/bash_completion
