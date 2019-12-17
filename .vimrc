@@ -53,6 +53,11 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'
 
+" Notes
+Plugin 'vimwiki/vimwiki'
+Plugin 'plasticboy/vim-markdown'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,7 +73,7 @@ set hidden
 set wrap
 
 " set python binary for you complete me plugin
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -122,6 +127,7 @@ nnoremap <leader><leader> <s-^>
 nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
 nnoremap <leader>i :! grails test-app --integration %:t:r<cr>
 nnoremap <CR> o<Esc>
+inoremap kj <Esc>
 
 
 nnoremap <leader>I :call GrailsImport()<cr>
