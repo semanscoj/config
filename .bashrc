@@ -134,6 +134,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 set editing-mode vi
+set -o vi
+bind '"kj":"\e"'
 
 # This needs to be towards the bottom of file to not get a delay in new tab with tmux
 if [ -f ~/.xinitrc ]; then
