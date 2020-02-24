@@ -73,7 +73,7 @@ set hidden
 set wrap
 
 " set python binary for you complete me plugin
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
