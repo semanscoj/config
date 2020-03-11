@@ -72,6 +72,9 @@ set timeoutlen=500
 set hidden
 set wrap
 
+" set tmp folder for swp files, failback to local.
+set directory^=$HOME/.vim/tmp//,.
+
 " set python binary for you complete me plugin
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
