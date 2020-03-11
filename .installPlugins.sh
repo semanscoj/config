@@ -8,6 +8,15 @@ sudo apt-get install ctags
 sudo apt-get install silversearcher-ag
 sudo apt-get install tmux
 sudo apt-get install tmuxinator
+
+if [ ! -d "$HOME/.vim/tmp" ]; then
+	mkdir "$HOME/.vim/tmp"
+fi
+
+if [ ! -d "$HOME/.vim/undodir" ]; then
+	mkdir "$HOME/.vim/undodir"
+fi
+
 ln -s ~/.snippets/ultisnips/ ~/.vim/ultisnips
 # Vim You Complete Me Plugin Requirements
 sudo apt-get install cmake python-dev
