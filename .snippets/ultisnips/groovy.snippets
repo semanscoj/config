@@ -32,6 +32,6 @@ endsnippet
 
 snippet wrp "wrap a visual block and ident" b
 if($1){
-	${VISUAL}
+	${2:${VISUAL: # content}}
 }$0
 endsnippet
