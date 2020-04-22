@@ -9,6 +9,8 @@ sudo apt-get install silversearcher-ag
 sudo apt-get install tmux
 sudo apt-get install tmuxinator
 
+vim +PluginInstall +qall
+
 if [ ! -d "$HOME/.vim/tmp" ]; then
 	mkdir "$HOME/.vim/tmp"
 fi
@@ -23,3 +25,4 @@ sudo apt-get install cmake python-dev
 mkdir /tmp/ycm_build
 cmake -G "Unix Makefiles" /tmp/ycm_build  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 cmake --build /tmp/ycm_build --target ycm_core --config Release
+

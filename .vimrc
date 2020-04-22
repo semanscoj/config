@@ -145,6 +145,7 @@ set showmode
 set number
 set hidden
 set clipboard=unnamed
+set encoding=utf-8
 syntax on
 
 " CTRLP preferences
