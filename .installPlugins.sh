@@ -3,11 +3,7 @@
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # default vim install is missing +clipboard
-apt-get install vim-gtk
-apt-get install ctags
-apt-get install silversearcher-ag
-apt-get install tmux
-apt-get install tmuxinator
+apt-get install -y vim-gtk ctags silversearcher-ag tmux tmuxinator
 
 vim +PluginInstall +qall
 tmux source ~/.tmux.conf
