@@ -101,16 +101,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-# InspectPoint
-if [ -f ~/.inspectpoint ]; then
-    . ~/.inspectpoint
-fi
-
-# TableUp DB
-if [ -f ~/.tableup ]; then
-    . ~/.tableup
-fi
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -125,10 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-# This loads in key remapping if the file exist::
 
 # Bash VIM
 export VISUAL=vim
@@ -143,13 +129,6 @@ if [ -f ~/.xinitrc ]; then
 	. ~/.xinitrc
 fi
 
-export GRAILS_OPTS="-Xmx900m -XX:MaxPermSize=684m"
-export JAVA_OPTS="-Xms2048m -Xmx20480m"
-
 if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

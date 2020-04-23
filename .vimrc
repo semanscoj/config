@@ -79,7 +79,7 @@ set directory^=$HOME/.vim/tmp//,.
 set undodir^=$HOME/.vim/undodir//,.
 
 " set python binary for you complete me plugin
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+" let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
