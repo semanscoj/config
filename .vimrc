@@ -37,9 +37,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmux-plugins/tmux-yank'
 Plugin 'tmux-plugins/tmux-sensible'
 
-" Grails
-Plugin 'semanscoj/grails-import-vim'
-
 " Rails
 "
 Plugin 'tpope/vim-rails'
@@ -79,7 +76,6 @@ set directory^=$HOME/.vim/tmp//,.
 set undodir^=$HOME/.vim/undodir//,.
 
 " set python binary for you complete me plugin
-" let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -90,19 +86,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories=["ultisnips"]
-
-let g:tagbar_type_groovy = {
-    \ 'ctagstype' : 'groovy',
-    \ 'kinds'     : [
-        \ 'p:package:1',
-        \ 'c:classes',
-        \ 'i:interfaces',
-        \ 't:traits',
-        \ 'e:enums',
-        \ 'm:methods',
-        \ 'f:fields:1'
-    \ ]
-\ }
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -130,13 +113,8 @@ endfunction
 
 nnoremap <leader>g :Gstatus<cr>
 nnoremap <leader><leader> <s-^>
-nnoremap <leader>u :! grails test-app --unit %:t:r<cr>
-nnoremap <leader>i :! grails test-app --integration %:t:r<cr>
 nnoremap <CR> o<Esc>
 inoremap kj <Esc>
-
-
-nnoremap <leader>I :call GrailsImport()<cr>
 
 " Map ctrl s to save
 noremap <C-s> :w<CR>
