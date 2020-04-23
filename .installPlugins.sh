@@ -10,6 +10,7 @@ apt-get install tmux
 apt-get install tmuxinator
 
 vim +PluginInstall +qall
+tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 if [ ! -d "$HOME/.vim/tmp" ]; then
